@@ -59,7 +59,7 @@ export default {
   <div class="grid grid-cols-6 gap-4">
     <div class="col-start-2 col-span-4">
       <Top100 :dataTop100="dataTop100" />
-      <div class=" flex btn-group items-end w-full justify-center gap-2">
+      <div class=" flex btn-group items-end w-full justify-center gap-2 mt-5">
         <button class="btn-left border-2 border-black rounded-lg w-[50px] hover:bg-[#ddd]" @click="prePage()"><font-awesome-icon icon="fa-solid fa-arrow-left"/></button>
         <button class="btn-right border-2 border-black rounded-lg w-[50px] hover:bg-[#ddd]" @click="nextPage()"><font-awesome-icon icon="fa-solid fa-arrow-right"/></button>
       </div>
