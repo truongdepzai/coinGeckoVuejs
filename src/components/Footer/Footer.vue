@@ -55,7 +55,7 @@
             
         </div>
         <div class="col-start-2 mt-5">
-                <p class="col-span-6 w-full">© 2023 CoinGecko. All Rights Reserved.</p>
+                <p class="col-span-6 w-full">© This website is made based on coinecko.com.</p>
                 
             </div>
         <div class="flex col-start-5">
