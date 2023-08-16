@@ -1,7 +1,7 @@
 <template>
 
     <div class="my-16 ">
-        <div class="font-bold text-[1.5rem] mb-[20px] border-b border-[#dddddd] pb-2">Xu hướng</div>
+        <div class="font-bold text-[1.5rem] mb-[20px] border-b border-[#dddddd] pb-2">Trending</div>
 
             <div class="grid grid-cols-4 gap-2 justify-center px-2">
    

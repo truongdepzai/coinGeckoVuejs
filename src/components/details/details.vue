@@ -10,7 +10,10 @@
                 <img :src="dataCoin.image.small" class="icon w-[50px]" /> <span class="name font-bold text-[20px]">{{ dataCoin.name }}</span>
                 <span class="BTC uppercase text-[20px] text-[#B0A1A1]">{{ dataCoin.symbol }}</span>
               </div>
-              <div class="price text-[40px] font-bold"> {{ dataCoin.market_data.current_price.usd }} US$</div>
+              <div class="flex items-center">
+                <div class="price text-[40px] font-bold "> {{ dataCoin.market_data.current_price.usd }} US$</div>
+                <div class="price text-[15px] font-semibold ml-1" :class="[dataCoin.market_data.price_change_percentage_24h > 0 ? 'text-green-500':  'text-red-500']"> {{ dataCoin.market_data.price_change_percentage_24h}} %</div>
+              </div>
               <div class="price2 uppercase text-[12px] text-[#B0A1A1] mb-2" >1.00000000 {{ dataCoin.symbol }} </div>
               <div class="button-group mb-2">
                 <button
@@ -78,9 +81,9 @@
         </div>
         <div class="col-start-3 w-full mt-5">
           <div class="flex w-full gap-1">
-            <div class="font-bold  bg-green-400 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Buy/Shell</div>
-            <div class="font-bold  bg-green-400 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Wallet</div>
-            <p class="font-bold  bg-green-400 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Earn Crypto</p>
+            <div class="font-bold  bg-green-500 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Buy/Shell</div>
+            <div class="font-bold  bg-green-500 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Wallet</div>
+            <p class="font-bold  bg-green-500 rounded-lg px-2 mr-1 text-[12px] hover:bg-green-300 hover:cursor-pointer py-1 px-2 ">Earn Crypto</p>
           </div>
 
           <div class="info w-full font-bold text-[20px] m-1">Infor</div>
