@@ -15,7 +15,8 @@ export default {
       dataTrending: [],
       dataTop100: [],
       APIUrl: "https://api.coingecko.com/api/v3",
-      page: 1
+      page: 1,
+      msg : []
     };
   },
   props:{
@@ -24,6 +25,12 @@ export default {
   mounted() {
     this.getTrendingData();
     this.getTop100Data();
+    this.emitter.on("onGetMsg", msg =>{
+            // this.msg = msg;
+            this.getMsg(msg)
+        
+            
+        })
   },
 
   methods: {
@@ -43,15 +50,22 @@ export default {
     },
     nextPage(){
       this.page = this.page + 1;
-      console.log(this.page);
       this.getTop100Data()
     },
     prePage(){
       this.page = this.page - 1;
-      console.log(this.page);
       this.getTop100Data()
+    },
+    async getMsg(msg){
+      console.log(msg);
+      this.dataTop100 = await this.dataTop100.filter(item => item.name === msg)
+      console.log(this.dataTop100)
+      
+     
     }
+
   },
+
 };
 </script>
 

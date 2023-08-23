@@ -43,13 +43,12 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
     name:'Top100',
     data(){
         return{
-
+            msg: []
  
         }
     },
@@ -59,6 +58,10 @@ export default {
 
    
     methods:{
+        
+    },
+    mounted(){
+        
         
     }
 }
